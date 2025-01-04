@@ -1,8 +1,11 @@
 import "./globals.css";
 
+import { metadata } from "@/config/metadata";
 import { site } from "@/config/site";
 
 import Script from "next/script";
+
+export { metadata };
 
 export default function RootLayout({
   children,
