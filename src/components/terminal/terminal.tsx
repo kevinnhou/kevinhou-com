@@ -136,7 +136,7 @@ export default function Terminal() {
   }
 
   async function processCommand(cmd: string): Promise<CommandResult> {
-    if (cmd.trim().toLowerCase().startsWith("clear ")) {
+    if ((cmd.trim().toLowerCase() === "clear") || cmd.trim().toLowerCase().startsWith("clear ")) {
       setTimeout(() => {
         setHistory([])
         setCommandSuccess(true)
