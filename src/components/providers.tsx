@@ -2,6 +2,8 @@
 
 import type { ReactNode } from "react"
 
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider, useTheme } from "next-themes"
 import { Toaster } from "sonner"
 
@@ -14,6 +16,8 @@ export default function Providers({ children }: { children: ReactNode }) {
     >
       <ToasterProvider />
       {children}
+      <Analytics />
+      <SpeedInsights />
     </ThemeProvider>
   )
 }
